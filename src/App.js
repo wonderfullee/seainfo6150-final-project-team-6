@@ -56,7 +56,7 @@ function App() {
           exact
           render={({ match }) => (
             <RestaurantDetail
-              //data = {data}
+              data = {data}
               category = {match.params.category}
               index = {match.params.index}/>
           )}

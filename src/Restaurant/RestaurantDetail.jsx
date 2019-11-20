@@ -1,21 +1,21 @@
 import React from 'react'
-import data from  '../data/data.json'
+
 
 const RestaurantDetail = (props) => {
     return (
         <div>
             <div className="logoImage">LOGO Image</div>
             <div className="hotelImages">
-                <img className = "hotelImage" src = {data[props.category][props.index].image_url} />
+                <img className = "hotelImage" src = {props.data[props.category][props.index].image_url} />
             </div>
             <div className="hotelDetailList">
                 <ul>
-                    <li className="name">{data[props.category][props.index].name}</li>
-                    <li className="prices">{data[props.category][props.index].price}</li>
-                    <li className="rating">{data[props.category][props.index].rating}</li>
-                    <li className="businessHours">{data[props.category][props.index].businessHours}</li>
-                    <li className="display_phone">{data[props.category][props.index].display_phone}</li>
-                    <li className="display_address">{data[props.category][props.index].location.display_address}</li>
+                    <li className="name">{props.data[props.category][props.index].name}</li>
+                    <li className="prices">{props.data[props.category][props.index].price}</li>
+                    <li className="rating">{props.data[props.category][props.index].rating}</li>
+                    <li className="businessHours">{props.data[props.category][props.index].businessHours}</li>
+                    <li className="display_phone">{props.data[props.category][props.index].display_phone}</li>
+                    <li className="display_address">{props.data[props.category][props.index].location.display_address}</li>
                     
                 </ul>
             </div>
