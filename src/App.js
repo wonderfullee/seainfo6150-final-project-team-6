@@ -9,7 +9,6 @@ import RestaurantCategory from "./Restaurant/RestaurantCategory.jsx";
 import RestaurantDetail from "./Restaurant/RestaurantDetail.jsx";
 import data from "./data/data.json";
 import Error from "./Error/Error.jsx";
-import reverse from "./Restaurant/Reservation"
 
 const externalContent = {
   id: "article-1",
@@ -32,9 +31,6 @@ function App() {
             </li>
             <li>
               <Link to="/login">Login/Register</Link>
-            </li>
-            <li>
-              <Link to="./Restaurant/Reservation">reverse</Link>
             </li>
           </ul>
         </nav>
@@ -65,7 +61,7 @@ function App() {
               index = {match.params.category}/>
           )}
         />
-
+        <Route component={Error} />
       </Switch>
     </Router>
   );
