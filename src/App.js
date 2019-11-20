@@ -2,9 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Home from "./Home/Home.jsx";
-import Foo from "./Foo/Foo.jsx";
-import Bar from "./Bar/Bar.jsx";
-import Baz from "./Baz/Baz.jsx";
+import About from "./About/About.jsx";
+import UserLogin from "./User/UserLogin.jsx";
+import UserRegister from "./User/UserRegister.jsx";
+import RestaurantCategory from "./Restaurant/RestaurantCategory.jsx";
+import RestaurantDetail from "./Restaurant/RestaurantDetail.jsx";
+import data from "./data/data.json";
 import Error from "./Error/Error.jsx";
 import reverse from "./Restaurant/Reservation"
 
@@ -25,13 +28,10 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/foo">Foo</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <Link to="/bar/hats/sombrero">Bar</Link>
-            </li>
-            <li>
-              <Link to="/baz">Baz</Link>
+              <Link to="/login">Login/Register</Link>
             </li>
             <li>
               <Link to="./Restaurant/Reservation">reverse</Link>
@@ -43,21 +43,27 @@ function App() {
             renders the first one that matches the current URL. */}
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/foo" exact component={Foo} />
+        <Route path="/about" exact component={About} />
+        <Route path="/login" exact component={UserLogin} />
+        <Route path="/register" exact component={UserRegister} />
         <Route
-          path="/bar/:categoryId/:productId"
+          path="/restaurants/:category"
           exact
           render={({ match }) => (
-            <Bar
-              categoryId={match.params.categoryId}
-              productId={match.params.productId}
-            />
+            <RestaurantCategory
+              data = {data}
+              category = {match.params.category}/>
           )}
         />
         <Route
-          path="/baz"
+          path="/restaurants/:category/:index"
           exact
-          render={() => <Baz content={externalContent} />}
+          render={({ match }) => (
+            <RestaurantDetail
+              data = {data}
+              category = {match.params.category}
+              index = {match.params.category}/>
+          )}
         />
 
       </Switch>
