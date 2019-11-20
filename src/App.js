@@ -6,6 +6,7 @@ import Foo from "./Foo/Foo.jsx";
 import Bar from "./Bar/Bar.jsx";
 import Baz from "./Baz/Baz.jsx";
 import Error from "./Error/Error.jsx";
+import Resturantdateil from "./Restaurant/RestaurantDetail.jsx"
 
 const externalContent = {
   id: "article-1",
@@ -31,6 +32,9 @@ function App() {
             </li>
             <li>
               <Link to="/baz">Baz</Link>
+            </li>
+            <li>
+              <Link to="/Restaurant">Resturantdateil</Link>
             </li>
           </ul>
         </nav>

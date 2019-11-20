@@ -94,7 +94,11 @@
           },
           "phone":"+13607617021",
           "display_phone":"(360) 761-7021",
-          "distance":12160.75509861967
+          "distance":12160.75509861967,
+          "businessHours":["Monday - Friday : 10am - 10pm",
+            "Saturday: 10am - 10pm",
+            "Sunday: 10am - 7pm"
+]
        },
        {
           "id":"UV5Ei7jcWxtwQwZMHtsE2A",
@@ -174,7 +178,11 @@
           },
           "phone":"+13608932333",
           "display_phone":"(360) 893-2333",
-          "distance":18646.0259541356
+          "distance":18646.0259541356,
+          "businessHours":["Monday - Friday : 10am - 10pm",
+            "Saturday: 10am - 10pm",
+            "Sunday: 10am - 7pm"
+]
        },
        {
           "id":"EIjrDWehtBYlpQy90y0qig",
@@ -214,7 +222,11 @@
           },
           "phone":"+13608935599",
           "display_phone":"(360) 893-5599",
-          "distance":18952.29148123049
+          "distance":18952.29148123049,
+          "businessHours":["Monday - Friday : 10am - 10pm",
+            "Saturday: 10am - 10pm",
+            "Sunday: 10am - 7pm"
+]
        },
        {
           "id":"kJ11MdUFCAQ_XmDoi3EKgA",
@@ -296,7 +308,11 @@
           },
           "phone":"+12068869879",
           "display_phone":"(206) 886-9879",
-          "distance":74624.10966065129
+          "distance":74624.10966065129,
+          "businessHours":["Monday - Friday : 10am - 10pm",
+            "Saturday: 10am - 10pm",
+            "Sunday: 10am - 7pm"
+]
        },
        {
           "id":"k-LvhxwWGmr2FVpXVvw9dA",
@@ -344,7 +360,11 @@
           },
           "phone":"+13608932482",
           "display_phone":"(360) 893-2482",
-          "distance":18425.609847647578
+          "distance":18425.609847647578,
+          "businessHours":["Monday - Friday : 10am - 10pm",
+            "Saturday: 10am - 10pm",
+            "Sunday: 10am - 7pm"
+]
        },
        {
           "id":"1uOhSsZ43yHcsOBgJltD-w",
@@ -391,7 +411,11 @@
           },
           "phone":"+12067749122",
           "display_phone":"(206) 774-9122",
-          "distance":49381.65265846013
+          "distance":49381.65265846013,
+          "businessHours":["Monday - Friday : 10am - 10pm",
+            "Saturday: 10am - 10pm",
+            "Sunday: 10am - 7pm"
+]
        }
     ],
     "total":63,
