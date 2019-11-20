@@ -8,6 +8,11 @@ import tra from '../imgs/tra.jpg';
 import logo from '../imgs/logo1.svg';
 
 
+
+
+
+
+
 const Home = () => {
     return (
         <div className={mainpage.main}>
@@ -53,9 +58,9 @@ const Home = () => {
                 </div>
             </div>
             <div className={mainpage.about}>
-                <a href="" target='_blank' className={mainpage.contect}>About</a>
+                <a href="" target='_blank' className={mainpage.contect}>about us</a>
                 <text className={mainpage.contect}>    |   </text>
-                <a href="" target='_blank' className={mainpage.contect}>Contect us</a>
+                <a href="" target='_blank' className={mainpage.contect}>contect us</a>
             </div>
 
         </div>

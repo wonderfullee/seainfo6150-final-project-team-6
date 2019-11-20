@@ -1,0 +1,14 @@
+ <svg width="640" height="350" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://www.86y.org/demo/svg/-->
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_2_blur">
+   <feGaussianBlur stdDeviation="0.2" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <text stroke="#000000" transform="matrix(26.12320899963379,0,0,1,-10666.76497104764,0) " xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_1" y="299.8" x="419" stroke-width="0" fill="#000000"/>
+  <ellipse stroke="#000000" id="svg_3" ry="122.499996" rx="301.499996" cy="209.299996" cx="303.499996" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#6ff2f7"/>
+  <text filter="url(#svg_2_blur)" font-style="italic" stroke="#000000" transform="matrix(9.447284976593403,0,0,6.921839237213134,-720.4305457424766,-697.9799035862088) " xml:space="preserve" text-anchor="middle" font-family="Fantasy" font-size="24" id="svg_2" y="139.8" x="105" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">FOOD</text>
+ </g>
+</svg>
