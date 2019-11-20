@@ -6,7 +6,7 @@ const RestaurantDetail = (props) => {
         <div>
             <div className="logoImage">LOGO Image</div>
             <div className="hotelImages">
-                <img className = "hotelImage" src ={data[props.category][props.index].image_url} />
+                <img className = "hotelImage" src = {data[props.category][props.index].image_url} />
             </div>
             <div className="hotelDetailList">
                 <ul>
@@ -15,7 +15,7 @@ const RestaurantDetail = (props) => {
                     <li className="rating">{data[props.category][props.index].rating}</li>
                     <li className="businessHours">{data[props.category][props.index].businessHours}</li>
                     <li className="display_phone">{data[props.category][props.index].display_phone}</li>
-                    <li className="display_address">{data[props.category][props.index].display_address}</li>
+                    <li className="display_address">{data[props.category][props.index].location.display_address}</li>
                     
                 </ul>
             </div>
@@ -23,9 +23,7 @@ const RestaurantDetail = (props) => {
             <form method="get" action="/Reservation">
                 <button type="submit">Make Reservation</button>
             </form>
-            </div>
-
-            
+            </div>     
         </div>
     )
 }
