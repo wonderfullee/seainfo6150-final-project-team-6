@@ -9,7 +9,12 @@ export default class UserLogin extends Component {
 	render() {
 	    return (
 	    	<div>
-	    		<h>Login</h>
+	    		  <h1>Login</h1>  
+        <form method="post">  
+            <input type="text" required="required" placeholder="Name" name="n"></input><br />
+            <input type="password" required="required" placeholder="Password" name="p"></input><br />
+            <button class="but" type="submit">Login</button>  
+        </form> 
 	    	</div>
 	    );
 	}
