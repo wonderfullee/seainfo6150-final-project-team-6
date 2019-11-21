@@ -58,7 +58,7 @@ function App() {
             <RestaurantDetail
               data = {data}
               category = {match.params.category}
-              index = {match.params.category}/>
+              index = {match.params.index}/>
           )}
         />
         <Route component={Error} />
