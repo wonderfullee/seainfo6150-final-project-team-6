@@ -9,6 +9,7 @@ import RestaurantCategory from "./Restaurant/RestaurantCategory.jsx";
 import RestaurantDetail from "./Restaurant/RestaurantDetail.jsx";
 import data from "./data/data.json";
 import Error from "./Error/Error.jsx";
+import './App.css';
 
 const externalContent = {
   id: "article-1",
@@ -37,32 +38,36 @@ function App() {
       </header>
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" exact component={About} />
-        <Route path="/login" exact component={UserLogin} />
-        <Route path="/register" exact component={UserRegister} />
-        <Route
-          path="/restaurants/:category"
-          exact
-          render={({ match }) => (
-            <RestaurantCategory
-              data = {data}
-              category = {match.params.category}/>
-          )}
-        />
-        <Route
-          path="/restaurants/:category/:index"
-          exact
-          render={({ match }) => (
-            <RestaurantDetail
-              data = {data}
-              category = {match.params.category}
-              index = {match.params.index}/>
-          )}
-        />
-        <Route component={Error} />
-      </Switch>
+      <section>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" exact component={About} />
+          <Route path="/login" exact component={UserLogin} />
+          <Route path="/register" exact component={UserRegister} />
+          <Route
+            path="/restaurants/:category"
+            exact
+            render={({ match }) => (
+              <RestaurantCategory
+                data = {data}
+                category = {match.params.category}/>
+            )}
+          />
+          <Route
+            path="/restaurants/:category/:index"
+            exact
+            render={({ match }) => (
+              <RestaurantDetail
+                data = {data}
+                category = {match.params.category}
+                index = {match.params.index}/>
+            )}
+          />
+          <Route component={Error} />
+        </Switch>
+      </section>
+      
+      <footer></footer>
     </Router>
   );
 }
