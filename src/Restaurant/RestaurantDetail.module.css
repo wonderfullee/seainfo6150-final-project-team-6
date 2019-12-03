@@ -13,12 +13,12 @@
     width: 600px;
     height: 500px;
 }
-table, td, th {  
+.restaurantDetailTable td, th {  
     border: 1px solid #ddd;
     text-align: left;
   }
   
-  table {
+.restaurantDetailTable {
     background-color:lightgray;
     opacity:0.7;
 
@@ -26,11 +26,11 @@ table, td, th {
     width: 100%;
   }
   
-  th, td {
+  .styles.detailtext th, td {
     padding: 15px;
   }
 
-  input[type=text] {
+  .detailtext input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

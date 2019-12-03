@@ -92,7 +92,7 @@ export default class RestaurantDetail extends Component {
 
 
                 </table>    
-                <form id= "reservateion"  hidden={this.state.hiddeForm}>
+                <form className={styles.detailForm} id= "reservateion"  hidden={this.state.hiddeForm}>
                     First Name: <br/>
                     <input type ="text" placeholder = "First Name" name = "firstname" value={this.state.firstname} onChange ={this.formChange}></input><br/>
                     Last Name: <br></br>
