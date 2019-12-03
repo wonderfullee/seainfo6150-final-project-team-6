@@ -12,14 +12,15 @@ export default class RestaurantCategory extends Component {
   	}	
 
 	render() {
-		if(this.props.data[this.state.category] == undefined ) {
+		if(this.props.data[this.state.category] === undefined ) {
 			return (<Redirect to = "/err" />);
 		} else {
 			return (
-		    	<div>
-		    		<h1>Logo</h1>
-		    		<p> Category: {this.state.category} </p>
-		    		<ul>
+		    	<div className="restaurant-category">
+		    		<div className="category-name">
+		    			<h1 > Category: {this.state.category.toUpperCase()} </h1> 
+		    		</div>
+		    		<ul className="restaurant-category-list">
 		    			{this.props.data[this.state.category].map((restaurant, index) => (
 	        				<li key={restaurant.id}>
 	        					<RestaurantGeneral 
