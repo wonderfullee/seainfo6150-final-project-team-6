@@ -55,10 +55,11 @@ export default class RestaurantDetail extends Component {
         return (
         <div>
         <div>
+           
             <h1 >{this.props.data[this.props.category][this.props.index].name}</h1>
         </div>
         <div className= {styles.container}>
-            <div className="logoImage">LOGO Image</div>
+            
             
                 <img className = {styles.restaurantDetai} src = {this.props.data[this.props.category][this.props.index].image_url} alt={this.props.data[this.props.category][this.props.index].name}/>
                 

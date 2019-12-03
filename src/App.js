@@ -42,6 +42,10 @@ function App() {
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <section>
+      <div className = "logo">
+                <h1 className={"h1"}>NEU-restaurant </h1>
+                {/*<img className= "logimg" src={logo} alt = "logo"/>*/}
+      </div>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
