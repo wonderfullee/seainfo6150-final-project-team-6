@@ -53,7 +53,10 @@ export default class RestaurantDetail extends Component {
       
     render() {
         return (
-        
+        <div>
+        <div>
+            <h1 >{this.props.data[this.props.category][this.props.index].name}</h1>
+        </div>
         <div className= {styles.container}>
             <div className="logoImage">LOGO Image</div>
             
@@ -125,7 +128,7 @@ export default class RestaurantDetail extends Component {
 
                 { this.state.hiddeSubmission ? null :
                 <div>
-                    <h4>Thank you! below is your Revervation Detail </h4>
+                    <h2>Thank you! We got your revervation   See you soon</h2>
 
                 <table>
                 <tr>
@@ -156,6 +159,7 @@ export default class RestaurantDetail extends Component {
                 </div>}
           
                 </div>
+            </div>
             </div>
         )
     }
