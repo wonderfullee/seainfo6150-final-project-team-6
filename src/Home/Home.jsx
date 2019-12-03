@@ -12,10 +12,6 @@ const Home = () => {
     return (
         <div className= "main">
 
-            <div className = "logo">
-                <h1 className={"h1"}>NEU-restaurant </h1>
-                {/*<img className= "logimg" src={logo} alt = "logo"/>*/}
-            </div>
 
                 <div className="cateInner">
 
