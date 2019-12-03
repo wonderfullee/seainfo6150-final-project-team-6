@@ -1,11 +1,11 @@
-h1{   
+.login h1{   
     font-size: 4em;
     color: rgb(0, 0, 0);
     margin: 0.67em 0; 
     position: relative;
     left: 42%;
 }   
-input{   
+.login input{   
     width: 278px;   
     height: 18px;   
     margin-bottom: 10px;   
@@ -17,7 +17,7 @@ input{
     position: relative;
     left: 38%;
 }   
-button{
+.login button{
     position: relative;
     left: 46%; 
 }
