@@ -8,6 +8,7 @@
         "is_closed": false,
         "url": "https://www.yelp.com/biz/sushi-and-wok-puyallup?adjust_creative=IHG37WRJAXyEU1pkHagVZQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=IHG37WRJAXyEU1pkHagVZQ",
         "review_count": 220,
+        "businessHours":"Monday - Friday 10am - 10pm Saturday: 10am - 11 pm Sunday: 11am - 9pm",
         "categories": [
         {
             "alias": "sushi",

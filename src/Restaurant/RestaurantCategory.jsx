@@ -20,7 +20,7 @@ export default class RestaurantCategory extends Component {
 		    		<h1>Logo</h1>
 		    		<p> Category: {this.state.category} </p>
 		    		<ul>
-		    			{this.props.data[this.state.category].map((restaurant, index) => (
+		    			{this.props.data[this.state.category].map((restaurant, index) => ( 
 	        				<li key={restaurant.id}>
 	        					<RestaurantGeneral 
 	        					index = {index}

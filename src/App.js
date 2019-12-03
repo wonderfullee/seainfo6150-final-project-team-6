@@ -7,6 +7,7 @@ import UserLogin from "./User/UserLogin.jsx";
 import UserRegister from "./User/UserRegister.jsx";
 import RestaurantCategory from "./Restaurant/RestaurantCategory.jsx";
 import RestaurantDetail from "./Restaurant/RestaurantDetail.jsx";
+import Reservation from "./Restaurant/Reservation.jsx"
 import data from "./data/data.json";
 import Error from "./Error/Error.jsx";
 import './App.css';
@@ -15,10 +16,12 @@ const externalContent = {
   id: "article-1",
   title: "An Article",
   author: "April Bingham",
-  text: "Some text in the article"
+  text: "Some text in the article",
+  
 };
 
 function App() {
+  let reservateId = Math.floor(1000 + Math.random() * 9000)
   return (
     <Router>
       <header>
@@ -63,7 +66,24 @@ function App() {
                 index = {match.params.index}/>
             )}
           />
-          <Route component={Error} />
+          <Route
+            path="/reservateion"
+            exact
+            render={({ match }) => (
+              
+              <Reservation
+                firstname = {match.params.firstname}
+                lastname = {match.params.lastname}
+                phonenumber={match.params.phonenumber}
+                numofGuest={match.params.numofGuest}
+                date={match.params.date}
+                bookedTime={match.params.bookedTime}
+              />
+
+            )
+          }
+          />
+      
         </Switch>
       </section>
       
