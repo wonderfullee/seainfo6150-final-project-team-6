@@ -3,50 +3,57 @@
     display: grid;
     grid-template-rows: auto;
     margin: 20px;
-    background-image: linear-gradient(
-            to bottom right,
-            rgb(22, 226, 220),
-            rgba(54, 233, 222, 0.64),
-            white 30%
-    );
+    margin-left: auto;
+    margin-right: auto;
+    /*background-image: linear-gradient(*/
+            /*to bottom right,*/
+            /*rgb(22, 226, 220),*/
+            /*rgba(54, 233, 222, 0.64),*/
+            /*white 30%*/
+    /*);*/
 }
 
 .logo{
     margin: auto;
-    margin-top:100px;
+    margin-top:50px;
     margin-bottom: 30px;
-    max-height : 200px;
-
+    max-height : 300px;
 }
 
 .cateOuter{
     display: grid;
-    grid-auto-rows: auto;
-    margin-top : 20px;
-    margin-left : auto;
-    margin-right: auto;
+    /*display: table-cell;*/
+    /*vertical-align: middle;*/
+    /*margin : 20px;*/
 }
 
 .cateInner{
     display: grid;
+    grid-auto-rows: auto;
     grid-template-columns: 20% 20% 20% 20% 20%;
     margin-top: 20px;
+    margin-left : auto;
+    margin-right: auto;
 }
 
 .img:hover{
     display: grid;
     grid-auto-rows: auto;
     cursor: pointer;
+    font-family: "Book Antiqua";
+    text-shadow: 1px 1px 2px #fff;
     font-size: 15px;
     font-style: italic;
     font-weight: bold;
     margin-left: auto;
     margin-right : auto;
     border-radius: 5px;
-    border : 5px ridge #e68511;
+    border : 10px ridge #7be6d7;
+    box-shadow: 10px 10px 5px #888888;
 }
 
 .foodText{
+    text-shadow: #fff 1px 0 0;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: auto;
@@ -63,34 +70,79 @@
     width : 500px;
 }
 
-.login :hover {
-    font-style: italic;
+
+/*media query part*/
+
+@media  (min-width: 800px) and (max-width : 1000px){
+    .cateInner{
+        display: grid;
+        grid-gap :20px;
+        grid-template-columns: 33% 33% 33%;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
-.login{
-    position :relative;
-    float: right;
-    margin-right: 40px;
+.pic{
+/*nothing */
+}
+
+@media  (max-width: 800px) {
+    .cateInner{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .img{
+        margin-top: 20px;
+        max-height: 250px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .pic{
+        height: 200px;
+        width: 200px;
+    }
 
 }
 
-.loginUrl{
-    float: right;
-    font-size: 25px;
-    height: 30px;
-    width: 200px;
-}
 
 
-.about{
-    margin-top : 50px;
-    margin-left:auto;
-    margin-right:auto;
-}
-.contect:hover{
-    background-color: yellow;
-}
 
-.contect{
-    font-size: 20px;
-}
+/*.login :hover {*/
+    /*font-style: italic;*/
+/*}*/
+
+/*.login{*/
+    /*position :relative;*/
+    /*float: right;*/
+    /*margin-right: 40px;*/
+
+/*}*/
+
+/*.loginUrl{*/
+    /*float: right;*/
+    /*font-size: 25px;*/
+    /*height: 30px;*/
+    /*width: 200px;*/
+/*}*/
+
+
+/*.about{*/
+    /*margin-top : 50px;*/
+    /*margin-left:auto;*/
+    /*margin-right:auto;*/
+/*}*/
+
+/*.contect:hover{*/
+    /*background-color: yellow;*/
+/*}*/
+
+/*.contect{*/
+    /*font-size: 20px;*/
+/*}*/
