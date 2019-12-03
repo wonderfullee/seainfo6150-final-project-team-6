@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./Register.css"
+
 export default class UserRegister extends Component { 
 	
 	constructor(props) {
@@ -8,7 +8,7 @@ export default class UserRegister extends Component {
 
 	render() {
 	    return (
-	    	<div>
+	    	<div className="register">
 			<h2>Registration</h2>
 	    <form method="post">  
             <input type="text" required="required" placeholder="Name" name="n"></input><br /> 
@@ -18,7 +18,7 @@ export default class UserRegister extends Component {
             <input type="phone" required="required" placeholder="Phone" name="p"></input><br />               
         </form>
 		<form method ="get" action = "/">
-		<button className="but" type="submit">Register</button>   
+		<button type="submit">Register</button>   
 		</form>
 	    	</div>
 	    );
