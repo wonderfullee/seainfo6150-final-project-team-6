@@ -1,12 +1,22 @@
-import React from 'react'
+import React, {Component} from "react";
 
-const Reservation = () => {
-    return (
-        <div>
-            Thank you
-            
-        </div>
-    )
-}
 
-export default Reservation
+export default class Reservation extends Component {
+
+	constructor(props) {
+        super(props);	
+        console.log(props)
+	    this.state = {
+            firstname: props.firstname,
+            lastname: props.lastname
+	    }
+  	}	
+      render() {
+          return(
+              <div>
+                  Thank you {this.props.firstname}
+              </div>
+          )
+
+      }
+    }

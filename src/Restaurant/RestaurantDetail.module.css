@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+
+}
+
+.detailtext{
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurantDetai{
+    border-radius: 10px;
+    width: 600px;
+    height: 500px;
+}
+.container td, th {  
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+.container table {
+    background-color:lightgray;
+    opacity:0.7;
+
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .detailtext th, td {
+    padding: 15px;
+  }
+
+  .detailForm input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+
+
+  
+
+  .reservationButton{
+    box-shadow: 0px 10px 14px -7px #9fb4f2;
+    background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+    background-color:#7892c2;
+    border-radius:16px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:18px;
+    font-weight:bold;
+    padding:10px 18px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #283966;
+  }
+
+
+
