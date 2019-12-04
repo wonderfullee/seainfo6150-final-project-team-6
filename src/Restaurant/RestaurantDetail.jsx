@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+
 import styles from '../styles/RestaurantDetail.module.css'
 import {Redirect, withRouter} from 'react-router-dom';
 
@@ -18,11 +19,17 @@ export default class RestaurantDetail extends Component {
             cellPhopne:"",
             numofGuest :"",
             reservationDate: "",
-            reservationTime: ""
+            reservationTime: "",
+            ImageEnLarge: false
 	    }
       }
 
-      
+      clickImage =(event) =>{
+          event.preventDefault();
+        this.setState ({
+            ImageEnLarge: !this.state.ImageEnLarge
+        })
+    }
 
       submitForm = () => {
         this.setState({
@@ -40,20 +47,24 @@ export default class RestaurantDetail extends Component {
             [name]: value
     });
 
+
+
 }
 
-
-
-
-      
+ 
     render() {
         return (
         <div>
-           <h1 className={styles.restaurantDetaiH1}>{this.props.data[this.props.category][this.props.index].name}</h1>
+           <h1 className={styles.restaurant_detai_H1}>{this.props.data[this.props.category][this.props.index].name}</h1>
         <div className= {styles.restaurantDetaiContainer}>
             
-            
-                <img className = {styles.restaurantDetaiImage} src = {this.props.data[this.props.category][this.props.index].image_url} alt={this.props.data[this.props.category][this.props.index].name}/>
+            <div className = {styles.restaurant_image_container}>
+                <img className = {styles.restaurant_image} src = {this.props.data[this.props.category][this.props.index].image_url} alt={this.props.data[this.props.category][this.props.index].name} onClick={this.clickImage}/>
+
+            </div>
+
+                                
+
                 
                 <div className = {styles.detailtext}>
                 <table className ={styles.restaurantDetailTable}>
@@ -154,6 +165,7 @@ export default class RestaurantDetail extends Component {
                 </div>
             </div>
             </div>
+           
         )
     }
 }
