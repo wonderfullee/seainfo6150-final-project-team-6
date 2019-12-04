@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import styles from '../Restaurant/RestaurantDetail.module.css'
-import Reservation from '../Restaurant/Reservation'
 import {Redirect, withRouter} from 'react-router-dom';
 
 

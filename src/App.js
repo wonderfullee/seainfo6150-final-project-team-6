@@ -7,7 +7,6 @@ import UserLogin from "./User/UserLogin.jsx";
 import UserRegister from "./User/UserRegister.jsx";
 import RestaurantCategory from "./Restaurant/RestaurantCategory.jsx";
 import RestaurantDetail from "./Restaurant/RestaurantDetail.jsx";
-import Reservation from "./Restaurant/Reservation.jsx"
 import data from "./data/data.json";
 import Error from "./Error/Error.jsx";
 import './App.css';
@@ -42,10 +41,9 @@ function App() {
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <section>
-      <div className = "logo">
+        <div className = "logo">
                 <h1 className={"h1"}>NEU-restaurant </h1>
-                {/*<img className= "logimg" src={logo} alt = "logo"/>*/}
-      </div>
+        </div>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
@@ -70,24 +68,11 @@ function App() {
                 index = {match.params.index}/>
             )}
           />
-          <Route
-            path="/reservateion"
-            exact
-            render={({ match }) => (
-              
-              <Reservation
-                firstname = {match.params.firstname}
-                lastname = {match.params.lastname}
-                phonenumber={match.params.phonenumber}
-                numofGuest={match.params.numofGuest}
-                date={match.params.date}
-                bookedTime={match.params.bookedTime}
-              />
 
             )
           }
           />
-      
+          <Route component={Error} />
         </Switch>
       </section>
       

@@ -5,7 +5,6 @@ import mex from '../imgs/mex.jpg';
 import jap from '../imgs/jap.jpg';
 import itl from '../imgs/itlian.jpg';
 import tra from '../imgs/tra.jpg';
-import logo from '../imgs/logo1.svg';
 
 
 const Home = () => {
