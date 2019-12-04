@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import styles from '../Restaurant/RestaurantDetail.module.css'
-import Reservation from '../Restaurant/Reservation'
+import styles from '../styles/RestaurantDetail.module.css'
 import {Redirect, withRouter} from 'react-router-dom';
 
 
@@ -30,10 +29,6 @@ export default class RestaurantDetail extends Component {
             hiddeForm: true,
             hiddeSubmission: false
         })
-
-
- 
-        
       }
 
       formChange = (event) =>{
@@ -54,14 +49,11 @@ export default class RestaurantDetail extends Component {
     render() {
         return (
         <div>
-        <div>
-           
-            <h1 >{this.props.data[this.props.category][this.props.index].name}</h1>
-        </div>
-        <div className= {styles.container}>
+           <h1 className={styles.restaurantDetaiH1}>{this.props.data[this.props.category][this.props.index].name}</h1>
+        <div className= {styles.restaurantDetaiContainer}>
             
             
-                <img className = {styles.restaurantDetai} src = {this.props.data[this.props.category][this.props.index].image_url} alt={this.props.data[this.props.category][this.props.index].name}/>
+                <img className = {styles.restaurantDetaiImage} src = {this.props.data[this.props.category][this.props.index].image_url} alt={this.props.data[this.props.category][this.props.index].name}/>
                 
                 <div className = {styles.detailtext}>
                 <table className ={styles.restaurantDetailTable}>
@@ -118,7 +110,7 @@ export default class RestaurantDetail extends Component {
                     <br />
                     <input type="date" name="reservationDate" onChange ={this.formChange}></input>
 
-                    <select name="reservationTime" form="reservateion" value={this.state.vale} onChange ={this.formChange}>
+                    <select className={styles.reservationSelector}  name="reservationTime" form="reservateion" value={this.state.vale} onChange ={this.formChange}>
                         <option value="11pm-2pm">11pm-2pm</option>
                         <option value="6pm-9pm">6pm-9pm</option>
                     </select>
