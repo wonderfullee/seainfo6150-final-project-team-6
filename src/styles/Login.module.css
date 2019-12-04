@@ -15,9 +15,15 @@
     color: rgb(0, 0, 0);   
     background-color: rgb(255, 255, 255); 
     position: relative;
-    left: 38%;
+    left: 37%;
 }   
+
 .login button{
     position: relative;
     left: 46%; 
+}
+
+.login a {
+    position: relative;
+    left: 42%; 
 }

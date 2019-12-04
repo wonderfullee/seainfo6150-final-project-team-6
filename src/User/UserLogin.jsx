@@ -15,6 +15,7 @@ export default class UserLogin extends Component {
             <input  type="password" required="required" placeholder="Password" name="p"></input><br />
         	</form> 
 			<form method ="get" action = "/">
+			<a href="/register"> Dont't have an account? </a> <br/>
 			<button type="submit">Login</button>   
 			</form>
 	    	</div>
