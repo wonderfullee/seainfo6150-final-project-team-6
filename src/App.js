@@ -20,7 +20,6 @@ const externalContent = {
 };
 
 function App() {
-  let reservateId = Math.floor(1000 + Math.random() * 9000)
   return (
     <Router>
       <header>

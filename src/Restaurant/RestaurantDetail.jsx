@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styles from '../styles/RestaurantDetail.module.css'
 
 export default class RestaurantDetail extends Component {
-
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -28,13 +28,13 @@ export default class RestaurantDetail extends Component {
         }else if(isNaN(this.state.cellPhopne)) {
             alert("Invalid phone number,please enter only number")
         }else if(new Date(this.state.reservationDate) < new Date()){
-            alert("Invalid date,We only can take reservation Aleast 2 day after today")
+            alert("In order to get your best experience,Please take reservation aleast 2 days after today")
         }else {
             this.setState({
             hiddeForm: true,
             hiddeSubmission: false
-        })
-    }
+            })
+        }
     }
 
     formChange = (event) => {
@@ -46,17 +46,16 @@ export default class RestaurantDetail extends Component {
         });
     }
 
-
     render() {
         return (
             <div>
                 <h1 className={styles.restaurant_detai_H1}>{this.props.data[this.props.category][this.props.index].name}</h1>
                 <div className={styles.restaurant_detai_container}>
                     <div className={styles.restaurant_image_container}>
-                        <img className={styles.restaurant_image} src={this.props.data[this.props.category][this.props.index].image_url} alt={this.props.data[this.props.category][this.props.index].name} onClick={this.clickImage} />
+                        <img className={styles.restaurant_image} src={this.props.data[this.props.category][this.props.index].image_url} alt={this.props.data[this.props.category][this.props.index].name}/>
                     </div>
-                    <div className={styles.detailtext}>
-                        <table className={styles.restaurantDetailTable}>
+                    <div className={styles.detail_text}>
+                        <table>
                             <tr>
                                 <th>Restaurant</th>
                                 <th>RestaurantDetail</th>
