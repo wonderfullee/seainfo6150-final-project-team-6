@@ -22,14 +22,22 @@ export default class RestaurantDetail extends Component {
     }
 
     submitForm = () => {
-        this.setState({
+
+        if(this.state.firstname.trim().length == 0 || this.state.lastname.trim().length == 0 || this.state.cellPhopne.trim().length == 0 || this.state.reservationDate === '' || this.state.reservationTime === '' ||this.state.numofGuest === ''){
+            alert("Please enter or select every input in form")
+        }else if(isNaN(this.state.cellPhopne)) {
+            alert("Invalid phone number,please enter only number")
+        }else if(new Date(this.state.reservationDate) < new Date()){
+            alert("Invalid date,We only can take reservation Aleast 2 day after today")
+        }else {
+            this.setState({
             hiddeForm: true,
             hiddeSubmission: false
         })
     }
+    }
 
     formChange = (event) => {
-        event.preventDefault();
         const target = event.target;
         const value = target.value;
         const name = target.name;
@@ -78,25 +86,26 @@ export default class RestaurantDetail extends Component {
                                 <td>{this.props.data[this.props.category][this.props.index].location.display_address}</td>
                             </tr>
                         </table>
-                        <form className={styles.detail_form} id="reservateion" hidden={this.state.hiddeForm}>
+                        <form className={styles.detail_form} id="reservateion" hidden={this.state.hiddeForm} >
                             First Name: <br />
-                            <input type="text" placeholder="First Name" name="firstname" value={this.state.firstname} onChange={this.formChange}></input><br />
+                            <input type="text" placeholder="First Name" name="firstname" value={this.state.firstname} onChange={this.formChange} ></input><br />
                             Last Name: <br></br>
-                            <input type="text" placeholder="Last Name" name="lastname" value={this.state.lastname} onChange={this.formChange}></input><br />
+                            <input type="text" placeholder="Last Name" name="lastname" value={this.state.lastname} onChange={this.formChange} ></input><br />
                             Phone Number <br />
-                            <input type="text" placeholder="Phone Number" name="cellPhopne" value={this.state.cellPhopne} onChange={this.formChange}></input><br />
+                            <input type="text" placeholder="Phone Number" name="cellPhopne" value={this.state.cellPhopne} onChange={this.formChange} ></input><br />
                             Number of Guest <br />
                             <input type="radio" name="numofGuest" value="1" onChange={this.formChange} /> 1
-                     <input type="radio" name="numofGuest" value="2" defaultChecked onChange={this.formChange} /> 2
-                     <input type="radio" name="numofGuest" value="3" onChange={this.formChange} /> 3
-                     <input type="radio" name="numofGuest" value="4" onChange={this.formChange} /> 4
-                     <input type="radio" name="numofGuest" value="5" onChange={this.formChange} /> 5
-                     <input type="radio" name="numofGuest" value="5+" onChange={this.formChange} /> 5+
-                     <br />
+                            <input type="radio" name="numofGuest" value="2" onChange={this.formChange} /> 2
+                            <input type="radio" name="numofGuest" value="3" onChange={this.formChange} /> 3
+                            <input type="radio" name="numofGuest" value="4" onChange={this.formChange} /> 4
+                            <input type="radio" name="numofGuest" value="5" onChange={this.formChange} /> 5
+                            <input type="radio" name="numofGuest" value="5+" onChange={this.formChange} /> 5+
+                            <br />
                             Reservation Date and Time
-                     <br />
+                            <br />
                             <input type="date" name="reservationDate" onChange={this.formChange}></input>
                             <select className={styles.reservation_selector} name="reservationTime" form="reservateion" value={this.state.vale} onChange={this.formChange}>
+                                <option value="" selected="selected">Please select time</option>
                                 <option value="11pm-2pm">11pm-2pm</option>
                                 <option value="6pm-9pm">6pm-9pm</option>
                             </select>
@@ -105,7 +114,7 @@ export default class RestaurantDetail extends Component {
                         </form>
                         {this.state.hiddeSubmission ? null :
                             <div>
-                                <h2>Thank you! We got your revervation   See you soon</h2>
+                                <h2>Thank you! We got your reservateion   See you soon</h2>
                                 <table>
                                     <tr>
                                         <td>First Name</td>
